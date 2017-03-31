@@ -1,0 +1,116 @@
+@import "../base/mixin/fn.styl"
+//苹果5s不支持flex布局
+[data-dpr="2"] .model-container {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .model-container {
+  font-size: 48px;
+}
+
+.model-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  //background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(101, 101, 101, 0.4);
+  display table
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transform: translate3d(0, 0, 0) scale(1.185);
+  transform: translate3d(0, 0, 0) scale(1.185);
+  opacity: 0;
+  font-size 16px
+  &.active {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+
+  .model-wrapper {
+    display: table-cell
+    vertical-align middle
+    text-align center
+    .model-box {
+      width: 16.875em;
+      margin auto
+      background: rgba(252, 252, 252, 0.8);
+      border-radius: 0.75em;
+
+      //添加对话框
+      &.model-prompt {
+        .model-content {
+          padding 0 1em 1em
+        }
+        .model-input {
+          font-size 0.875em
+          width (463 / 28) em
+          height (30 / 14) em
+          padding-left (23 / 28) em
+          background: #ffffff;
+          border: 1px solid #979797;
+          color: #4a4a4a;
+        }
+        .model-error {
+          margin-top (5 / 14)em
+          margin-bottom -(5 / 14)em
+          margin-left (5 / 14)em
+          text-align left
+          font-size: 0.875em;
+          color: #ff7300;
+          line-height: 1;
+        }
+      }
+
+      .model-header {
+        color: #4a4a4a;
+        text-align center
+        font-weight bold
+        padding-top 1.125em
+        padding-bottom 0.84375em
+        .model-header-word {
+          font-size: 1.0625em;
+        }
+      }
+
+      .model-content {
+        font-size: 1em;
+        color: #4a4a4a;
+        padding 0 1.875em 1.125em
+        text-align center
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+      .model-footer {
+        border-top 1px solid #d3d6cf
+        height 2.75em
+        line-height 2.75em
+        text-align center
+        color: #316ccb;
+        .model-cancel, .model-confirm {
+          font-size: 1.0625em;
+          position: relative;
+          float: left;
+          width 50%
+        }
+        .model-cancel.both::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: '';
+          height: 100%;
+          width: 1px;
+          background-color: #d3d6cf;
+        }
+      }
+    }
+
+  }
+
+}
