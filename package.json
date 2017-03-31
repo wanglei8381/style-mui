@@ -1,5 +1,5 @@
 {
   "name": "style-mui",
-  "version": "0.0.1",
-  "index": "style.styl"
+  "version": "0.0.3",
+  "main": "src/style.styl"
 }
