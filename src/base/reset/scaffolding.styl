@@ -70,3 +70,9 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+
+// input type="number"在华为荣耀6plus中会出现上下箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
