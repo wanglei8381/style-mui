@@ -5,8 +5,8 @@
   "license": "MIT",
   "author": "lei.wang@wuage.com",
   "scripts": {
-    "dev": "stylus src/style.styl -o dist/mui.css",
-    "build": "stylus src/style.styl -o dist/mui.min.css -c -m"
+    "dev": "stylus src/mui.styl -w -o dist/mui.css",
+    "build": "stylus src/mui.styl -o dist/mui.min.css -c -m"
   },
   "repository": {
     "type": "git",
